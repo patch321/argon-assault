@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{863068CD-6EC0-DF5F-134B-A3FB58AE5486}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/musicPlayer.cs">
+    <Files>
+      <File FileName="Assets/musicPlayer.cs" Line="15" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Argon_220Assault PreferredExecutionTarget="Unity.Editor" />
+  <MultiItemStartupConfigurations />
+</Properties>
