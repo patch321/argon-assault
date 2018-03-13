@@ -257,7 +257,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4209214722469860, guid: 8d9a11de737f140de8cfd26b1b77ce4e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.7
+      value: -3.2
       objectReference: {fileID: 0}
     - target: {fileID: 4209214722469860, guid: 8d9a11de737f140de8cfd26b1b77ce4e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -425,7 +425,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xSpeed: 12
+  ySpeed: 8.11
   xRange: 6
+  yRange: 5
 --- !u!1 &958293475
 GameObject:
   m_ObjectHideFlags: 0
