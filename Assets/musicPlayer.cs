@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class musicPlayer : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-        Invoke("LoadNextScene", 5f);
+    // Use this for initialization
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+    void Start () {
+        Invoke("LoadNextScene", 3f);
 	}
 	
 	// Update is called once per frame
