@@ -8,6 +8,14 @@ public class MusicPlayer : MonoBehaviour {
     // Use this for initialization
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        int numMusicPLayers = FindObjectsOfType<MusicPlayer>().Length;
+        if(numMusicPLayers > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }

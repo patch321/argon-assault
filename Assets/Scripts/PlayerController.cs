@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     float startingXPostition;
     float startingYPostition;
     float xThrow, yThrow;
+    bool movementEnabled = true;
 
     // Use this for initialization
     void Start () {
@@ -32,8 +33,11 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        ProcessTranslation();
-        ProcessRotation();
+        if(movementEnabled == true)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+        }        
     }
 
     private void ProcessRotation()
@@ -60,5 +64,10 @@ public class PlayerController : MonoBehaviour {
 
         transform.localPosition = new Vector3(newXPos, transform.localPosition.y, transform.localPosition.z);
         transform.localPosition = new Vector3(transform.localPosition.x, newYPos, transform.localPosition.z);
+    }
+
+    private void DisableMovement()
+    {
+        movementEnabled = false;
     }
 }
