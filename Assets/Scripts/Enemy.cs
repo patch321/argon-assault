@@ -7,13 +7,18 @@ public class Enemy : MonoBehaviour {
 
     [SerializeField] GameObject deathFX;
     [SerializeField] Transform parent;
+    [SerializeField] int scorePerHit = 12;
+    [SerializeField] int maxHits = 10;
+
+    Scoreboard scoreboard;
 
 	// Use this for initialization
 	void Start () {
-        AddNonTriggerBoxCollider();
+        AddBoxCollider();
+        scoreboard = FindObjectOfType<Scoreboard>();
 	}
 
-    private void AddNonTriggerBoxCollider()
+    private void AddBoxCollider()
     {
         Collider boxCollider = gameObject.AddComponent<BoxCollider>();
         boxCollider.isTrigger = false;
@@ -26,6 +31,21 @@ public class Enemy : MonoBehaviour {
 
     private void OnParticleCollision(GameObject other)
     {
+        ProcessHit();
+        if (maxHits <= 0)
+        {
+            KillEnemy();
+        }
+    }
+
+    private void ProcessHit()
+    {
+        maxHits -= 1;
+    }
+
+    private void KillEnemy()
+    {
+        scoreboard.ScoreHit(scorePerHit);
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parent;
         Destroy(gameObject);
